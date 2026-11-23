@@ -190,7 +190,7 @@
 
     .hero-header {
       background: linear-gradient(135deg, rgba(20, 83, 45, 0.94) 0%, rgba(21, 128, 61, 0.88) 55%, rgba(202, 138, 4, 0.9) 100%);
-      padding: 22px 20px;
+      padding: 20px 20px;
       text-align: center;
       color: #ffffff;
       border-bottom: 1px solid rgba(255, 255, 255, 0.38);
@@ -206,35 +206,35 @@
       font-weight: 700;
       padding: 4px 12px;
       border-radius: 999px;
-      margin-bottom: 9px;
+      margin-bottom: 8px;
       letter-spacing: 0.4px;
     }
 
-    .hero-title { font-size: 18.5px; font-weight: 700; letter-spacing: 0.4px; margin-bottom: 4px; }
-    .hero-subtitle { font-size: 12.5px; color: #fef9c3; }
+    .hero-title { font-size: 18px; font-weight: 700; letter-spacing: 0.4px; margin-bottom: 3px; }
+    .hero-subtitle { font-size: 12px; color: #fef9c3; }
 
-    .card-body { padding: 18px 20px 20px 20px; }
+    .card-body { padding: 16px 18px 18px 18px; }
 
     .section-header-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 10px;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
 
     .card-header-title {
       display: flex;
       align-items: center;
-      gap: 10px;
-      font-size: 14px;
+      gap: 9px;
+      font-size: 13.5px;
       font-weight: 700;
       color: var(--text-heading);
     }
 
     .badge-icon-theme {
-      width: 34px; height: 34px;
-      border-radius: 11px;
+      width: 32px; height: 32px;
+      border-radius: 10px;
       background: linear-gradient(135deg, rgba(220, 252, 231, 0.95) 0%, rgba(254, 249, 195, 0.95) 100%);
       border: 1px solid rgba(22, 163, 74, 0.25);
       color: #15803d;
@@ -244,8 +244,8 @@
     }
 
     .btn-icon-mini {
-      width: 34px; height: 34px;
-      border-radius: 11px;
+      width: 32px; height: 32px;
+      border-radius: 10px;
       border: 1.5px solid var(--card-border);
       background: var(--outline-btn-bg);
       color: var(--outline-btn-text);
@@ -261,12 +261,12 @@
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 9px;
+      gap: 8px;
     }
 
     .stat-box {
-      border-radius: 16px;
-      padding: 12px 8px;
+      border-radius: 15px;
+      padding: 10px 6px;
       text-align: center;
       border: 1.5px solid var(--card-border);
       background: var(--pcard-row-bg);
@@ -276,11 +276,11 @@
     .stat-box.belum { background: var(--box-room-bg); border-color: rgba(234, 179, 8, 0.5); }
 
     .stat-value {
-      font-size: 21px;
+      font-size: 20px;
       font-weight: 700;
       color: var(--text-heading);
       line-height: 1.15;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
 
     .stat-box.hadir .stat-value { color: #16a34a; }
@@ -288,13 +288,13 @@
     .stat-box.belum .stat-value { color: #ca8a04; }
     body.dark-mode .stat-box.belum .stat-value { color: #facc15; }
 
-    .stat-label { font-size: 10px; font-weight: 700; color: var(--text-muted); letter-spacing: 0.3px; }
+    .stat-label { font-size: 9.5px; font-weight: 700; color: var(--text-muted); letter-spacing: 0.3px; }
 
     .sync-status-bar {
-      margin-top: 9px;
-      margin-bottom: 16px;
-      padding: 7px 11px;
-      border-radius: 11px;
+      margin-top: 8px;
+      margin-bottom: 12px;
+      padding: 6px 10px;
+      border-radius: 10px;
       font-size: 11px;
       font-weight: 700;
       text-align: center;
@@ -309,20 +309,41 @@
       border-color: #ef4444;
     }
 
+    /* Keterangan Hasil Scan (Ditempatkan di Atas Kamera) */
+    .scan-feedback {
+      margin-bottom: 12px;
+      border-radius: 16px;
+      padding: 12px 14px;
+      display: none;
+      border: 1.5px solid var(--card-border);
+      animation: feedbackPop 0.22s ease-out;
+    }
+
+    @keyframes feedbackPop {
+      0% { transform: scale(0.97); opacity: 0.75; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .scan-feedback.success { display: block; background: rgba(220, 252, 231, 0.95); border-color: #22c55e; color: #14532d; }
+    .scan-feedback.warning { display: block; background: rgba(254, 249, 195, 0.96); border-color: #eab308; color: #854d0e; }
+    .scan-feedback.error { display: block; background: rgba(254, 226, 226, 0.96); border-color: #ef4444; color: #991b1b; }
+    .feedback-header { display: flex; align-items: center; gap: 8px; font-size: 13.5px; font-weight: 700; margin-bottom: 4px; }
+    .feedback-detail { font-size: 12px; line-height: 1.4; }
+
     .mode-tabs {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 6px;
       background: var(--pcard-row-bg);
       padding: 5px;
-      border-radius: 16px;
+      border-radius: 15px;
       border: 1.5px solid var(--card-border);
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
 
     .mode-tab-btn {
-      padding: 10px 6px;
-      border-radius: 12px;
+      padding: 9px 6px;
+      border-radius: 11px;
       border: 1px solid transparent;
       background: transparent;
       color: var(--text-label);
@@ -372,8 +393,8 @@
     }
 
     .camera-placeholder-icon {
-      width: 50px; height: 50px;
-      border-radius: 16px;
+      width: 48px; height: 48px;
+      border-radius: 15px;
       background: rgba(34, 197, 94, 0.2);
       border: 1px solid rgba(134, 239, 172, 0.4);
       color: #fef08a;
@@ -384,11 +405,11 @@
 
     .scan-reticle {
       position: absolute;
-      width: 64%;
+      width: 66%;
       aspect-ratio: 1 / 1;
       border: 2px dashed rgba(254, 240, 138, 0.85);
       border-radius: 20px;
-      box-shadow: 0 0 0 9999px rgba(6, 24, 14, 0.36);
+      box-shadow: 0 0 0 9999px rgba(6, 24, 14, 0.34);
       pointer-events: none;
       display: none;
     }
@@ -399,7 +420,7 @@
       height: 2.5px;
       background: linear-gradient(90deg, transparent, #4ade80, #fef08a, #4ade80, transparent);
       box-shadow: 0 0 10px #4ade80;
-      animation: laserSweep 2.2s ease-in-out infinite;
+      animation: laserSweep 2s ease-in-out infinite;
     }
 
     @keyframes laserSweep { 0%, 100% { top: 12%; } 50% { top: 86%; } }
@@ -461,14 +482,7 @@
       cursor: pointer;
     }
 
-    .scan-feedback { margin-top: 14px; border-radius: 18px; padding: 14px; display: none; border: 1.5px solid var(--card-border); }
-    .scan-feedback.success { display: block; background: rgba(220, 252, 231, 0.92); border-color: #22c55e; color: #14532d; }
-    .scan-feedback.warning { display: block; background: rgba(254, 249, 195, 0.94); border-color: #eab308; color: #854d0e; }
-    .scan-feedback.error { display: block; background: rgba(254, 226, 226, 0.94); border-color: #ef4444; color: #991b1b; }
-    .feedback-header { display: flex; align-items: center; gap: 8px; font-size: 13.5px; font-weight: 700; margin-bottom: 6px; }
-    .feedback-detail { font-size: 12px; line-height: 1.45; }
-
-    .history-list { display: flex; flex-direction: column; gap: 8px; }
+    .history-list { display: flex; flex-direction: column; gap: 8px; max-height: 360px; overflow-y: auto; }
     .history-item { background: var(--pcard-row-bg); border: 1px solid var(--card-border); border-radius: 14px; padding: 10px 12px; display: flex; align-items: center; justify-content: space-between; gap: 10px; cursor: pointer; }
     .history-name { font-size: 13px; font-weight: 700; color: var(--text-heading); text-transform: uppercase; margin-bottom: 2px; }
     .history-sub { font-size: 11px; color: var(--text-muted); }
@@ -549,7 +563,7 @@
             </span>
             <span>STATISTIK KEHADIRAN</span>
           </div>
-          <button type="button" id="btnRefreshStats" class="btn-icon-mini" onclick="muatDataAwal(true)" title="Perbarui Statistik">
+          <button type="button" id="btnRefreshStats" class="btn-icon-mini" onclick="sinkronDataServer(false)" title="Perbarui Data">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
               <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 16h5v5"/>
             </svg>
@@ -572,6 +586,15 @@
         </div>
 
         <div id="syncStatusBar" class="sync-status-bar">Menghubungkan ke server database...</div>
+
+        <!-- Keterangan Hasil Scan Ditempatkan di Atas Kamera -->
+        <div id="scanFeedbackBox" class="scan-feedback">
+          <div class="feedback-header">
+            <span id="feedbackIcon"></span>
+            <span id="feedbackTitle">-</span>
+          </div>
+          <div id="feedbackDetail" class="feedback-detail">-</div>
+        </div>
 
         <div class="mode-tabs">
           <button type="button" id="tabBtnCamera" class="mode-tab-btn active" onclick="gantiTabMode('camera')">
@@ -664,17 +687,10 @@
             <span>Catat Kehadiran</span>
           </button>
         </div>
-
-        <div id="scanFeedbackBox" class="scan-feedback">
-          <div class="feedback-header">
-            <span id="feedbackIcon"></span>
-            <span id="feedbackTitle">-</span>
-          </div>
-          <div id="feedbackDetail" class="feedback-detail">-</div>
-        </div>
       </div>
     </div>
 
+    <!-- Riwayat Kehadiran Bersama (Sinkron Antar-Perangkat) -->
     <div class="glass-card">
       <div class="card-body">
         <div class="section-header-row">
@@ -691,7 +707,7 @@
 
         <div id="historyListContainer" class="history-list">
           <div style="text-align:center; padding: 14px; font-size: 12px; color: var(--text-muted);">
-            Belum ada data scan pada sesi perangkat ini. Klik nama peserta di riwayat untuk melihat detail ruangan.
+            Memuat riwayat kehadiran dari server...
           </div>
         </div>
       </div>
@@ -748,12 +764,14 @@
     // TEMPEL WEB APP URL (/exec) DARI PROJECT APPS SCRIPT WEBSITE 2 DI BAWAH INI
     const GAS_API_URL = 'https://script.google.com/macros/s/AKfycbyAsVvTNTOXTwbrjCrs5QLUcHPa340-zT2TAI2JKU8nv-lvcEBzkP1FbRYDK2TSkNvK/exec';
 
-    const CACHE_KEY_PESERTA = 'tka_scanner_peserta_cache_v1';
-    const CACHE_KEY_HISTORY = 'tka_scanner_history_v1';
+    const CACHE_KEY_PESERTA = 'tka_scanner_peserta_cache_v2';
+    const CACHE_KEY_HISTORY = 'tka_scanner_history_v2';
 
     let cachedPeserta = [];
     let scanHistory = [];
     let logoDarkSrc = '', logoLightSrc = '';
+    let isSyncingNow = false;
+    let pendingScansCount = 0;
 
     function applyTheme(isDark) {
       document.body.classList.toggle('dark-mode', isDark);
@@ -779,7 +797,7 @@
     (function initTicker() {
       const items = [
         "Arahkan kamera ke <strong>Kode QR Presensi</strong> pada Kartu Peserta untuk validasi kehadiran instan.",
-        "Jika QR pada layar HP peserta redup atau pecah, gunakan tab <strong>Input Manual</strong> untuk mencari Nomor Peserta atau Nama Siswa.",
+        "Riwayat kehadiran otomatis tersinkronisasi di seluruh perangkat panitia setiap 15 detik.",
         "Klik nama siswa pada <strong>Riwayat Scan Terakhir</strong> untuk melihat detail lokasi lantai &amp; ruangan ujian."
       ];
       const html = items.map(t => `<span class="ticker-item"><span>${t}</span><span class="ticker-sep">&#10022;</span></span>`).join('');
@@ -807,19 +825,19 @@
         if (jenis === 'success') {
           osc.type = 'sine';
           osc.frequency.setValueAtTime(880, ctx.currentTime);
-          osc.frequency.setValueAtTime(1174.66, ctx.currentTime + 0.09);
+          osc.frequency.setValueAtTime(1174.66, ctx.currentTime + 0.08);
           gain.gain.setValueAtTime(0.18, ctx.currentTime);
-          gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.28);
+          gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.25);
           osc.start();
-          osc.stop(ctx.currentTime + 0.28);
+          osc.stop(ctx.currentTime + 0.25);
         } else {
           osc.type = 'triangle';
           osc.frequency.setValueAtTime(340, ctx.currentTime);
-          osc.frequency.setValueAtTime(260, ctx.currentTime + 0.14);
+          osc.frequency.setValueAtTime(260, ctx.currentTime + 0.12);
           gain.gain.setValueAtTime(0.2, ctx.currentTime);
-          gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.34);
+          gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.3);
           osc.start();
-          osc.stop(ctx.currentTime + 0.34);
+          osc.stop(ctx.currentTime + 0.3);
         }
       } catch (e) {}
     }
@@ -831,74 +849,81 @@
         const rawH = localStorage.getItem(CACHE_KEY_HISTORY);
         if (rawH) scanHistory = JSON.parse(rawH) || [];
       } catch (e) {}
+      if (cachedPeserta.length > 0) hitungStatistikLokal();
       renderRiwayat();
+    }
+
+    function hitungStatistikLokal() {
+      const total = cachedPeserta.length;
+      const hadir = cachedPeserta.filter(p => p.status === 'HADIR').length;
+      updateStatistikUI({ total: total, hadir: hadir, belum: Math.max(0, total - hadir) });
     }
 
     function updateStatistikUI(stats) {
       if (!stats) return;
-      const total = Number(stats.total || stats.totalPeserta || cachedPeserta.length || 0);
-      const hadir = Number(stats.hadir || stats.sudahHadir || 0);
+      const total = Number(stats.total || cachedPeserta.length || 0);
+      const hadir = Number(stats.hadir || 0);
       const belum = stats.belum !== undefined ? Number(stats.belum) : Math.max(0, total - hadir);
       document.getElementById('statTotal').textContent = total;
       document.getElementById('statHadir').textContent = hadir;
       document.getElementById('statBelum').textContent = belum;
     }
 
-    function muatDataAwal() {
-      const btn = document.getElementById('btnRefreshStats');
-      if (btn) btn.classList.add('spinning');
-      setSyncStatus('Menyinkronkan data peserta...', false);
-
+    function sinkronDataServer(silent) {
+      if (isSyncingNow || pendingScansCount > 0) return;
       if (GAS_API_URL.indexOf('GANTI_DENGAN_URL') !== -1) {
         setSyncStatus('URL Apps Script belum diisi pada GAS_API_URL di index.html.', true);
-        if (btn) btn.classList.remove('spinning');
         return;
       }
 
+      isSyncingNow = true;
+      const btn = document.getElementById('btnRefreshStats');
+      if (btn && !silent) btn.classList.add('spinning');
+      if (!silent) setSyncStatus('Menyinkronkan data dengan Google Sheets...', false);
+
+      const actionName = cachedPeserta.length === 0 ? 'init' : 'stats';
       const sep = GAS_API_URL.indexOf('?') === -1 ? '?' : '&';
-      fetch(GAS_API_URL + sep + 'action=init')
+
+      fetch(GAS_API_URL + sep + 'action=' + actionName + '&t=' + Date.now())
         .then(async r => {
           const rawText = await r.text();
           try {
             return JSON.parse(rawText);
-          } catch (parseErr) {
-            throw new Error('Respons server bukan JSON (Pastikan Code.gs sudah di-Deploy versi baru & akses diset ke "Anyone").');
+          } catch (e) {
+            throw new Error('Respons server bukan JSON.');
           }
         })
         .then(res => {
-          if (!res) throw new Error('Respons server kosong.');
-          if (res.status === 'error') {
-            throw new Error(res.message || 'Terjadi error di Code.gs');
+          if (!res || res.status === 'error') {
+            throw new Error((res && res.message) ? res.message : 'Gagal memuat data.');
           }
 
-          if (Array.isArray(res.peserta)) {
+          if (Array.isArray(res.peserta) && res.peserta.length > 0) {
             cachedPeserta = res.peserta;
             try { localStorage.setItem(CACHE_KEY_PESERTA, JSON.stringify(cachedPeserta)); } catch (e) {}
           }
 
-          if (res.stats) {
-            updateStatistikUI(res.stats);
-          } else if (cachedPeserta.length > 0) {
-            const jmlHadir = cachedPeserta.filter(p => p.status === 'HADIR').length;
-            updateStatistikUI({ total: cachedPeserta.length, hadir: jmlHadir });
+          if (Array.isArray(res.riwayat)) {
+            scanHistory = res.riwayat;
+            try { localStorage.setItem(CACHE_KEY_HISTORY, JSON.stringify(scanHistory)); } catch (e) {}
+            renderRiwayat();
           }
+
+          if (res.stats) updateStatistikUI(res.stats);
 
           if (res.logoDataUri) {
             logoDarkSrc = res.logoDataUri;
             applyTheme(document.body.classList.contains('dark-mode'));
           }
 
-          const infoSheet = res.sheetName ? (' (Sheet: ' + res.sheetName + ')') : '';
-          setSyncStatus('Terhubung • ' + cachedPeserta.length + ' peserta terbaca' + infoSheet, false);
+          const jamSync = new Date().toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+          setSyncStatus('Terhubung • ' + cachedPeserta.length + ' peserta (Sync ' + jamSync + ')', false);
         })
         .catch(err => {
-          setSyncStatus('Gagal memuat: ' + err.message, true);
-          if (cachedPeserta.length > 0) {
-            const jmlHadir = cachedPeserta.filter(p => p.status === 'HADIR').length;
-            updateStatistikUI({ total: cachedPeserta.length, hadir: jmlHadir });
-          }
+          if (!silent) setSyncStatus('Gagal sinkron: ' + err.message, true);
         })
         .finally(() => {
+          isSyncingNow = false;
           if (btn) btn.classList.remove('spinning');
         });
     }
@@ -913,11 +938,22 @@
       if (mode === 'manual') setTimeout(() => document.getElementById('inputManualKode').focus(), 100);
     }
 
+    // Kamera Live dengan Hardware BarcodeDetector + Fallback jsQR Ringan
     let isCameraRunning = false, videoStream = null, facingMode = 'environment';
     let scanAnimId = null, lastFrameTime = 0, scanPassCounter = 0;
     let lastScannedCode = '', lastScannedAt = 0;
+    let nativeDetector = null;
+    let isDetectingFrame = false;
     const offscreenCanvas = document.createElement('canvas');
     const offscreenCtx = offscreenCanvas.getContext('2d', { willReadFrequently: true });
+
+    if ('BarcodeDetector' in window) {
+      try {
+        nativeDetector = new window.BarcodeDetector({ formats: ['qr_code'] });
+      } catch (e) {
+        nativeDetector = null;
+      }
+    }
 
     async function toggleKamera() {
       if (isCameraRunning) hentikanKamera();
@@ -934,7 +970,7 @@
       try {
         if (videoStream) videoStream.getTracks().forEach(t => t.stop());
         videoStream = await navigator.mediaDevices.getUserMedia({
-          video: { facingMode: { ideal: facingMode }, width: { ideal: 1280 }, height: { ideal: 720 } },
+          video: { facingMode: { ideal: facingMode }, width: { ideal: 960 }, height: { ideal: 720 } },
           audio: false
         });
         video.srcObject = videoStream;
@@ -970,32 +1006,48 @@
 
     function loopScanKamera(timestamp) {
       if (!isCameraRunning) return;
-      if (timestamp - lastFrameTime >= 90) {
+      const interval = nativeDetector ? 45 : 75;
+
+      if (!isDetectingFrame && (timestamp - lastFrameTime >= interval)) {
         lastFrameTime = timestamp;
         const video = document.getElementById('cameraVideo');
+
         if (video.readyState === video.HAVE_ENOUGH_DATA && video.videoWidth > 0) {
-          const vw = video.videoWidth, vh = video.videoHeight;
-          scanPassCounter++;
+          if (nativeDetector) {
+            isDetectingFrame = true;
+            nativeDetector.detect(video)
+              .then(barcodes => {
+                if (barcodes && barcodes.length > 0 && barcodes[0].rawValue) {
+                  tanganiHasilKode(barcodes[0].rawValue.trim(), false);
+                }
+              })
+              .catch(() => { nativeDetector = null; })
+              .finally(() => { isDetectingFrame = false; });
+          } else if (typeof jsQR === 'function') {
+            const vw = video.videoWidth, vh = video.videoHeight;
+            scanPassCounter++;
 
-          let sx = 0, sy = 0, sw = vw, sh = vh;
-          if (scanPassCounter % 2 === 1) {
-            const cropSize = Math.floor(Math.min(vw, vh) * 0.68);
-            sx = Math.floor((vw - cropSize) / 2);
-            sy = Math.floor((vh - cropSize) / 2);
-            sw = cropSize;
-            sh = cropSize;
-          }
+            let sx = 0, sy = 0, sw = vw, sh = vh;
+            if (scanPassCounter % 2 === 1) {
+              const cropSize = Math.floor(Math.min(vw, vh) * 0.68);
+              sx = Math.floor((vw - cropSize) / 2);
+              sy = Math.floor((vh - cropSize) / 2);
+              sw = cropSize;
+              sh = cropSize;
+            }
 
-          const targetW = Math.min(sw, 640);
-          const targetH = Math.floor(sh * (targetW / sw));
-          offscreenCanvas.width = targetW;
-          offscreenCanvas.height = targetH;
-          offscreenCtx.drawImage(video, sx, sy, sw, sh, 0, 0, targetW, targetH);
+            const targetW = Math.min(sw, 440);
+            const targetH = Math.floor(sh * (targetW / sw));
+            offscreenCanvas.width = targetW;
+            offscreenCanvas.height = targetH;
+            offscreenCtx.drawImage(video, sx, sy, sw, sh, 0, 0, targetW, targetH);
 
-          if (typeof jsQR === 'function') {
             const imgData = offscreenCtx.getImageData(0, 0, targetW, targetH);
-            const code = jsQR(imgData.data, targetW, targetH, { inversionAttempts: 'attemptBoth' });
-            if (code && code.data) tanganiHasilKode(code.data.trim());
+            const invMode = (scanPassCounter % 4 === 0) ? 'attemptBoth' : 'dontInvert';
+            const code = jsQR(imgData.data, targetW, targetH, { inversionAttempts: invMode });
+            if (code && code.data) {
+              tanganiHasilKode(code.data.trim(), false);
+            }
           }
         }
       }
@@ -1013,20 +1065,29 @@
         document.getElementById('uploadPreviewWrap').style.display = 'flex';
 
         const img = new Image();
-        img.onload = function() {
-          const scales = [1, 0.75, 0.5, 1.3];
+        img.onload = async function() {
           let detected = null;
 
-          for (let i = 0; i < scales.length; i++) {
-            const w = Math.min(1200, Math.floor(img.naturalWidth * scales[i]));
-            const h = Math.floor(img.naturalHeight * (w / img.naturalWidth));
-            if (w < 120 || h < 120) continue;
+          if (nativeDetector) {
+            try {
+              const resNative = await nativeDetector.detect(img);
+              if (resNative && resNative.length > 0 && resNative[0].rawValue) {
+                detected = resNative[0].rawValue.trim();
+              }
+            } catch (err) {}
+          }
 
-            offscreenCanvas.width = w;
-            offscreenCanvas.height = h;
-            offscreenCtx.drawImage(img, 0, 0, w, h);
+          if (!detected && typeof jsQR === 'function') {
+            const scales = [1, 0.75, 0.5];
+            for (let i = 0; i < scales.length; i++) {
+              const w = Math.min(1000, Math.floor(img.naturalWidth * scales[i]));
+              const h = Math.floor(img.naturalHeight * (w / img.naturalWidth));
+              if (w < 120 || h < 120) continue;
 
-            if (typeof jsQR === 'function') {
+              offscreenCanvas.width = w;
+              offscreenCanvas.height = h;
+              offscreenCtx.drawImage(img, 0, 0, w, h);
+
               const imgData = offscreenCtx.getImageData(0, 0, w, h);
               const res = jsQR(imgData.data, w, h, { inversionAttempts: 'attemptBoth' });
               if (res && res.data) { detected = res.data.trim(); break; }
@@ -1037,7 +1098,7 @@
             tanganiHasilKode(detected, true);
           } else {
             bunyiNotifikasi('error');
-            tampilkanFeedback('warning', 'QR Tidak Terbaca dari Foto', 'Lihat Nomor Peserta pada pratinjau foto di atas, lalu tekan tombol "Ketik Nomor Peserta Secara Manual".');
+            tampilkanFeedback('warning', 'QR Tidak Terbaca dari Foto', 'Lihat Nomor Peserta pada pratinjau foto di bawah, lalu ketik secara manual.');
           }
         };
         img.src = dataUrl;
@@ -1080,62 +1141,119 @@
       tanganiHasilKode(kode, true);
     }
 
+    // Validasi Instan dari Cache + Simpan Latar Belakang ke Google Sheets
     function tanganiHasilKode(kodeRaw, bypassCooldown) {
       const kode = String(kodeRaw || '').trim();
       if (!kode) return;
 
       const now = Date.now();
-      if (!bypassCooldown && kode === lastScannedCode && (now - lastScannedAt) < 2800) return;
+      if (!bypassCooldown && kode === lastScannedCode && (now - lastScannedAt) < 2500) return;
       lastScannedCode = kode;
       lastScannedAt = now;
 
-      const lokalMatch = cachedPeserta.find(p => String(p.noPeserta || '').toUpperCase() === kode.toUpperCase());
+      const idxLokal = cachedPeserta.findIndex(p => String(p.noPeserta || '').toUpperCase() === kode.toUpperCase());
+      const lokalMatch = idxLokal >= 0 ? cachedPeserta[idxLokal] : null;
+      const waktuLokal = new Date().toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit', second: '2-digit' }).replace(/\./g, ':');
+
       if (lokalMatch) {
-        tampilkanFeedback('success', 'Memvalidasi: ' + String(lokalMatch.nama).toUpperCase(), 'No. Peserta: ' + lokalMatch.noPeserta + ' • ' + lokalMatch.sekolah + ' (' + lokalMatch.sesi + ' — ' + lokalMatch.ruang + ')');
+        const namaStr = String(lokalMatch.nama || kode).toUpperCase();
+        const sekolahStr = String(lokalMatch.sekolah || '-').toUpperCase();
+        const sesiRuangStr = [lokalMatch.sesi, lokalMatch.lantai, lokalMatch.ruang].filter(v => v && v !== '-').join(' • ') || '-';
+
+        // Jika di cache lokal sudah HADIR, langsung beri peringatan instan tanpa perlu kirim ulang
+        if (lokalMatch.status === 'HADIR') {
+          bunyiNotifikasi('warning');
+          tampilkanFeedback(
+            'warning',
+            'Peserta Sudah Tercatat Hadir' + (lokalMatch.waktu ? ' (Pukul ' + lokalMatch.waktu + ')' : ''),
+            namaStr + ' (' + lokalMatch.noPeserta + ') — ' + sekolahStr
+          );
+          document.getElementById('inputManualKode').value = '';
+          document.getElementById('quickSuggestList').innerHTML = '';
+          return;
+        }
+
+        // Optimistic UI: Langsung tampilkan sukses & bunyikan beep dalam 0.01 detik!
+        cachedPeserta[idxLokal].status = 'HADIR';
+        cachedPeserta[idxLokal].waktu = waktuLokal;
+        try { localStorage.setItem(CACHE_KEY_PESERTA, JSON.stringify(cachedPeserta)); } catch (e) {}
+
+        hitungStatistikLokal();
+        bunyiNotifikasi('success');
+        tampilkanFeedback(
+          'success',
+          'Kehadiran Berhasil Dicatat',
+          namaStr + ' (' + lokalMatch.noPeserta + ') — ' + sekolahStr + ' | ' + sesiRuangStr
+        );
+        tambahKeRiwayat({
+          noPeserta: lokalMatch.noPeserta,
+          nama: namaStr,
+          sekolah: sekolahStr,
+          sesiRuang: sesiRuangStr,
+          waktu: waktuLokal,
+          status: 'Hadir (' + waktuLokal + ')'
+        });
+        document.getElementById('inputManualKode').value = '';
+        document.getElementById('quickSuggestList').innerHTML = '';
+      } else if (cachedPeserta.length > 0) {
+        // Database sudah ter-cache penuh namun nomor tidak ditemukan
+        bunyiNotifikasi('error');
+        tampilkanFeedback('error', 'Data Tidak Ditemukan', 'Nomor peserta "' + kode + '" tidak terdaftar di database.');
+        return;
       } else {
-        tampilkanFeedback('warning', 'Memproses Kode: ' + kode, 'Menghubungkan ke server presensi...');
+        tampilkanFeedback('warning', 'Memvalidasi Kode: ' + kode, 'Menghubungkan ke server presensi...');
       }
 
+      // Kirim pencatatan ke Google Sheets di latar belakang
+      pendingScansCount++;
       const sep = GAS_API_URL.indexOf('?') === -1 ? '?' : '&';
       fetch(GAS_API_URL + sep + 'action=scan&kode=' + encodeURIComponent(kode))
         .then(r => r.json())
         .then(res => {
           if (res && res.stats) updateStatistikUI(res.stats);
+          if (res && Array.isArray(res.riwayat)) {
+            scanHistory = res.riwayat;
+            try { localStorage.setItem(CACHE_KEY_HISTORY, JSON.stringify(scanHistory)); } catch (e) {}
+            renderRiwayat();
+          }
 
           const sr = (res && res.scanResult) ? res.scanResult : res;
           const isOk = sr && (sr.success === true || sr.status === 'success');
           const isDup = sr && (sr.status === 'duplicate' || (sr.message && /sudah/i.test(sr.message)));
           const dataP = (sr && sr.data) ? sr.data : (lokalMatch || { noPeserta: kode });
 
-          const waktuStr = dataP.waktu || new Date().toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
-          const namaStr = String(dataP.nama || kode).toUpperCase();
-          const sekolahStr = String(dataP.sekolah || '-').toUpperCase();
-          const sesiRuangStr = [dataP.sesi, dataP.lantai, dataP.ruang].filter(Boolean).join(' • ') || '-';
-
-          if (isOk) {
-            bunyiNotifikasi('success');
-            tampilkanFeedback('success', (sr.message || 'Kehadiran Berhasil Dicatat'), namaStr + ' (' + (dataP.noPeserta || kode) + ') — ' + sekolahStr + ' | ' + sesiRuangStr);
-            tambahKeRiwayat({ noPeserta: dataP.noPeserta || kode, nama: namaStr, sekolah: sekolahStr, sesiRuang: sesiRuangStr, waktu: waktuStr, status: 'Hadir (' + waktuStr + ')' });
-            document.getElementById('inputManualKode').value = '';
-            document.getElementById('quickSuggestList').innerHTML = '';
-          } else if (isDup) {
+          if (isDup) {
             bunyiNotifikasi('warning');
-            tampilkanFeedback('warning', (sr.message || 'Peserta Sudah Tercatat Hadir'), namaStr + ' (' + (dataP.noPeserta || kode) + ') — ' + sekolahStr);
-          } else {
+            tampilkanFeedback(
+              'warning',
+              sr.message || 'Peserta Sudah Tercatat Hadir',
+              String(dataP.nama || kode).toUpperCase() + ' (' + (dataP.noPeserta || kode) + ') — ' + String(dataP.sekolah || '-').toUpperCase()
+            );
+          } else if (!isOk && !lokalMatch) {
             bunyiNotifikasi('error');
-            tampilkanFeedback('error', 'Data Tidak Ditemukan', (sr && sr.message) ? sr.message : ('Nomor peserta "' + kode + '" tidak terdaftar di database.'));
+            tampilkanFeedback('error', 'Data Tidak Ditemukan', (sr && sr.message) ? sr.message : ('Nomor peserta "' + kode + '" tidak terdaftar.'));
+          } else if (isOk && !lokalMatch) {
+            const wStr = dataP.waktu || waktuLokal;
+            const sRuang = [dataP.sesi, dataP.lantai, dataP.ruang].filter(v => v && v !== '-').join(' • ') || '-';
+            bunyiNotifikasi('success');
+            tampilkanFeedback('success', 'Kehadiran Berhasil Dicatat', String(dataP.nama || kode).toUpperCase() + ' (' + (dataP.noPeserta || kode) + ') — ' + String(dataP.sekolah || '-').toUpperCase());
+            tambahKeRiwayat({ noPeserta: dataP.noPeserta || kode, nama: String(dataP.nama || kode).toUpperCase(), sekolah: String(dataP.sekolah || '-').toUpperCase(), sesiRuang: sRuang, waktu: wStr, status: 'Hadir (' + wStr + ')' });
           }
         })
         .catch(() => {
-          bunyiNotifikasi('error');
-          tampilkanFeedback('error', 'Gagal Terhubung ke Server', 'Periksa koneksi internet perangkat panitia atau pastikan URL Web App sudah benar.');
+          setSyncStatus('Koneksi lambat — coba tekan refresh untuk cek sinkronisasi.', true);
+        })
+        .finally(() => {
+          pendingScansCount = Math.max(0, pendingScansCount - 1);
         });
     }
 
     function tampilkanFeedback(tipe, judul, detail) {
       const box = document.getElementById('scanFeedbackBox');
       const iconEl = document.getElementById('feedbackIcon');
-      box.className = 'scan-feedback ' + tipe;
+      box.className = 'scan-feedback';
+      void box.offsetWidth; // trigger ulang animasi pop
+      box.classList.add(tipe);
 
       if (tipe === 'success') {
         iconEl.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>';
@@ -1152,7 +1270,7 @@
     function tambahKeRiwayat(item) {
       scanHistory = scanHistory.filter(h => h.noPeserta !== item.noPeserta);
       scanHistory.unshift(item);
-      if (scanHistory.length > 30) scanHistory.pop();
+      if (scanHistory.length > 50) scanHistory.pop();
       try { localStorage.setItem(CACHE_KEY_HISTORY, JSON.stringify(scanHistory)); } catch (e) {}
       renderRiwayat();
     }
@@ -1160,7 +1278,11 @@
     function renderRiwayat() {
       const container = document.getElementById('historyListContainer');
       document.getElementById('historyCountBadge').textContent = scanHistory.length + ' data';
-      if (scanHistory.length === 0) return;
+
+      if (scanHistory.length === 0) {
+        container.innerHTML = '<div style="text-align:center; padding: 14px; font-size: 12px; color: var(--text-muted);">Belum ada peserta yang tercatat hadir.</div>';
+        return;
+      }
 
       container.innerHTML = scanHistory.map((item, idx) => `
         <div class="history-item" onclick="bukaDetailModal(${idx})">
@@ -1190,7 +1312,11 @@
 
     document.addEventListener('DOMContentLoaded', function() {
       bacaCache();
-      muatDataAwal();
+      sinkronDataServer(false);
+      // Sinkronisasi otomatis antar-perangkat setiap 15 detik saat halaman dibuka
+      setInterval(function() {
+        if (!document.hidden) sinkronDataServer(true);
+      }, 15000);
     });
   </script>
 </body>
